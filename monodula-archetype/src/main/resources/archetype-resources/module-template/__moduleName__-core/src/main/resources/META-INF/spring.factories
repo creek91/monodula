@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  ${package}.__moduleNameAsPackage__.config.__ModuleName__ConfigLoader

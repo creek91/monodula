@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+
+#[[
+apollo:
+  meta: ${APOLLO_META:http://localhost:8080}
+  bootstrap:
+    enabled: true
+    namespaces: application
+]]#

@@ -1,0 +1,6 @@
+#set($dollar='$')
+spring:
+  datasource:
+    url: ${dollar}{DATASOURCE_URL}
+    username: ${dollar}{DATASOURCE_USERNAME}
+    password: ${dollar}{DATASOURCE_PASSWORD}

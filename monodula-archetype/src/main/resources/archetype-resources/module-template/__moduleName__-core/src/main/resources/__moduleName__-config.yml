@@ -1,0 +1,4 @@
+# __moduleName__ module configuration
+__moduleName__:
+  order-timeout: 30s
+  max-retry: 3

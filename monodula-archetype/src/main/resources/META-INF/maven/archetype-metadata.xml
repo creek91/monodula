@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="monodula-archetype"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd">
+
+    <requiredProperties>
+        <requiredProperty key="groupId"/>
+        <requiredProperty key="artifactId"/>
+        <requiredProperty key="version">
+            <defaultValue>1.0.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="package">
+            <defaultValue>${groupId}.${artifactId}</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="modules"/>
+        <requiredProperty key="configCenter">
+            <defaultValue>apollo</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="javaVersion">
+            <defaultValue>17</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="springBootVersion">
+            <defaultValue>3.5.14</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <fileSets>
+        <fileSet filtered="true">
+            <directory>module-template</directory>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>common</directory>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>application</directory>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>.mvn</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false">
+            <directory></directory>
+            <includes>
+                <include>mvnw</include>
+                <include>mvnw.cmd</include>
+                <include>.editorconfig</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="false">
+            <directory>config/checkstyle</directory>
+            <includes>
+                <include>checkstyle.xml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+</archetype-descriptor>
