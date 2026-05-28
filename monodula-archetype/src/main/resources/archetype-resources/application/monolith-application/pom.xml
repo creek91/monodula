@@ -40,7 +40,6 @@
         <dependency>
             <groupId>io.github.creek91</groupId>
             <artifactId>monodula-archunit</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

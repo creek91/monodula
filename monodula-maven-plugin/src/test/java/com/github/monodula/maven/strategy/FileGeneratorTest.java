@@ -41,6 +41,21 @@ class FileGeneratorTest {
     }
 
     @Test
+    void generated_pom_archunit_has_no_version() throws IOException {
+        File outDir = tempDir.toFile();
+        List<String> deps = List.of("finance-app");
+        File pomFile = new File(outDir, "pom.xml");
+
+        new FileGenerator().generatePom(ctx("finance"), deps, pomFile);
+
+        String content = Files.readString(pomFile.toPath());
+        // monodula-archunit dependency should not have a version tag;
+        // version is managed by root pom dependencyManagement
+        assertThat(content).containsSubsequence(
+                "<artifactId>monodula-archunit</artifactId>", "<scope>test</scope>");
+    }
+
+    @Test
     void generated_pom_contains_all_dependencies() throws IOException {
         File outDir = tempDir.toFile();
         List<String> deps = List.of("finance-app", "finance-core", "account-api", "common-api");

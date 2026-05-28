@@ -12,7 +12,6 @@ public class FileGenerator {
     public void generatePom(SplitContext ctx, List<String> dependencies, File outputFile)
             throws IOException {
         String groupId = ctx.getGroupId();
-        String rootArtifactId = ctx.getRootArtifactId();
         String version = ctx.getVersion();
         String module = ctx.getModuleName();
 
@@ -32,7 +31,6 @@ public class FileGenerator {
         deps.append("        <dependency>\n");
         deps.append("            <groupId>io.github.creek91</groupId>\n");
         deps.append("            <artifactId>monodula-archunit</artifactId>\n");
-        deps.append("            <version>0.1.0-SNAPSHOT</version>\n");
         deps.append("            <scope>test</scope>\n");
         deps.append("        </dependency>\n");
 

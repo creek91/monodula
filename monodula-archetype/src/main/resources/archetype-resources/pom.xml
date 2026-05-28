@@ -116,6 +116,13 @@
                 <version>${apollo.version}</version>
             </dependency>
 
+            <!-- Monodula ArchUnit rules -->
+            <dependency>
+                <groupId>io.github.creek91</groupId>
+                <artifactId>monodula-archunit</artifactId>
+                <version>${monodulaVersion}</version>
+            </dependency>
+
             <!-- Internal modules: common -->
             <dependency>
                 <groupId>${groupId}</groupId>
@@ -164,7 +171,7 @@
             <plugin>
                 <groupId>io.github.creek91</groupId>
                 <artifactId>monodula-maven-plugin</artifactId>
-                <version>0.1.0-SNAPSHOT</version>
+                <version>${monodulaVersion}</version>
                 <executions>
                     <execution>
                         <goals>

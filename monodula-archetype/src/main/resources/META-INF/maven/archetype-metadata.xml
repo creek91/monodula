@@ -23,6 +23,9 @@
         <requiredProperty key="springBootVersion">
             <defaultValue>3.5.14</defaultValue>
         </requiredProperty>
+        <requiredProperty key="monodulaVersion">
+            <defaultValue>@project.version@</defaultValue>
+        </requiredProperty>
     </requiredProperties>
 
     <fileSets>
