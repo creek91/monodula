@@ -45,6 +45,13 @@
         <artifactId>maven-archetype-plugin</artifactId>
         <version>3.2.1</version>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <flattenMode>resolveCiFriendliesOnly</flattenMode>
+        </configuration>
+      </plugin>
     </plugins>
     <extensions>
       <extension>
